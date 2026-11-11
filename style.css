@@ -736,7 +736,7 @@ footer {
             rgba(11, 11, 11, 0.28) 67%,
             rgba(11, 11, 11, 0.12) 100%
         ),
-        url("images/lotus.jpg");
+        url("images/Lotus_bloom.gif");
 
     background-repeat: no-repeat;
     background-position: center, right center;
@@ -755,5 +755,62 @@ footer {
         background-position: center, right bottom;
         background-size: 100% 100%, auto 65%;
         opacity: 0.65;
+    }
+}
+
+
+/* ==============================
+   LOTUS BACK TO TOP BUTTON
+================================= */
+
+.page-lotus {
+    position: fixed;
+    right: 25px;
+    bottom: 22px;
+
+    width: 125px;
+    height: 90px;
+
+    background-image: url("images/Lotus_home.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.75;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.2));
+
+    display: block;
+    cursor: pointer;
+    z-index: 20;
+
+    transition: transform 0.3s ease,
+                opacity 0.3s ease,
+                filter 0.3s ease;
+}
+
+/* Hover effect */
+
+.page-lotus:hover {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.05);
+    filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.6));
+}
+
+/* Keyboard accessibility */
+
+.page-lotus:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 5px;
+    border-radius: 8px;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+    .page-lotus {
+        width: 95px;
+        height: 70px;
+        right: 12px;
+        bottom: 12px;
     }
 }
